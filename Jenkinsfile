@@ -10,9 +10,8 @@ pipeline {
 
         stage('Run Java') {
             steps {
-                cd 'https://github.com/Juhi-Lakdawala/jenkins/blob/master'
-                sh 'javac Demo.java'
-                sh 'java Demo'
+                sh 'javac master/Demo.java'
+                sh 'java master/Demo'
             }
         }
     }
