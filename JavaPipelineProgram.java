@@ -16,24 +16,4 @@ public class JavaPipelineProgram {
                 // Perform the final operation using the custom ForEach class
                 .forEach(new StringForEach()::perform);
     }
-
-    // Private classes
-    private static class StringConverter {
-        public static String toUpperCase(String string) {
-            return string.toUpperCase();
-        }
-    }
-
-    private static class StringFilter {
-        public static boolean isNotStartingWithE(String string) {
-            return !string.startsWith("e");
-        }
-    }
-
-    private static class StringForEach {
-        public void perform(String string) {
-            // Custom action to be performed for each string
-            System.out.println("Custom ForEach: " + string);
-        }
-    }
 }
